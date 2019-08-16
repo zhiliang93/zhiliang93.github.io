@@ -232,7 +232,7 @@ a {
 }
 #container .left-col {
   background: rgba(255,255,255,0.85);
-  width: 300px;
+  width: 400px;
   position: fixed;
   opacity: 1;
   -webkit-transition: all 0.2s ease-in;
@@ -263,7 +263,7 @@ a {
   right: 0;
   min-height: 100%;
   background: rgba(255,255,255,0.8);
-  left: 300px;
+  left: 400px;
   width: auto;
 }
 @media screen and (max-width: 800px) {
@@ -681,7 +681,7 @@ a {
 }
 #header .header-menu li a {
   font-size: 0.875rem;
-  min-width: 300px;
+  min-width: 400px;
 }
 #header .switch-area {
   position: relative;
@@ -1027,7 +1027,7 @@ a {
 }
 .hide-labels {
   position: fixed;
-  left: 378px;
+  left: 478px;
   top: 30px;
   padding: 1px;
   border: none;
@@ -1047,7 +1047,7 @@ a {
   opacity: 1;
 }
 #post-nav-button {
-  left: 300px;
+  left: 400px;
   top: 61.8%;
 }
 #post-nav-button a {
@@ -1690,7 +1690,7 @@ li:hover {
 }
 #tocButton {
   position: fixed;
-  left: 220px;
+  left: 320px;
   top: 385px;
   font-size: 0.9em;
   font-weight: bold;
@@ -1707,7 +1707,7 @@ li:hover {
 }
 .toc-article {
   position: fixed;
-  width: 230px;
+  width: 330px;
   top: 378px;
   bottom: 1em;
   left: 0;
@@ -2339,56 +2339,6 @@ pre .javascript .function {
 #footer .visit #site-visit:hover .fa,
 #footer .visit #page-visit:hover .fa {
   color: #333;
-}
-.share {
-  padding-left: 40px;
-  margin: 1em auto 0.5em;
-  opacity: 0.75;
-}
-.share:hover {
-  opacity: 1;
-}
-.bdsharebuttonbox a,
-.bdsharebuttonbox .bds_more {
-  width: 30px;
-  height: 30px !important;
-  line-height: 30px !important;
-  text-align: center;
-  padding-left: 0 !important;
-  font-size: 20.400000000000002px !important;
-  text-decoration: none;
-  color: #fff !important;
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.3);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.3);
-}
-.bdsharebuttonbox a:hover,
-.bdsharebuttonbox .bds_more:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  color: #fff !important;
-}
-.bdsharebuttonbox .bds_tsina {
-  background: #db332f !important;
-}
-.bdsharebuttonbox .bds_sqq {
-  background: #1cbcef !important;
-}
-.bdsharebuttonbox .bds_copy {
-  background: #8f8f8f !important;
-}
-.bdsharebuttonbox .bds_mail {
-  background: #6fc0e4 !important;
-}
-.bdsharebuttonbox .bds_weixin {
-  background: #8cdc49 !important;
-}
-.bdsharebuttonbox .bds_more {
-  background: #8cbcf5 !important;
-}
-.bdsharebuttonbox .bds_twi {
-  background: #21abf4 !important;
 }
 #page-nav {
   text-align: center;
