@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="HLM基本思路和生态学思考">
+<meta name="description" content="生态学是一门科学，有其严格的科学方法论。 这些内容摘抄于《生态学–关于变化中的地球》(第三版)，写得特别好！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HLM与生态学">
-<meta property="og:url" content="http://www.zhiliang.site/2019/08/25/HLM/index.html">
+<meta property="og:title" content="生态学科学方法">
+<meta property="og:url" content="http://www.zhiliang.site/2019/09/22/生态学科学方法/index.html">
 <meta property="og:site_name" content="Yao&#39;s jottings">
-<meta property="og:description" content="HLM基本思路和生态学思考">
+<meta property="og:description" content="生态学是一门科学，有其严格的科学方法论。 这些内容摘抄于《生态学–关于变化中的地球》(第三版)，写得特别好！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-25T06:05:18.362Z">
+<meta property="og:updated_time" content="2019-09-22T09:04:03.679Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HLM与生态学">
-<meta name="twitter:description" content="HLM基本思路和生态学思考">
+<meta name="twitter:title" content="生态学科学方法">
+<meta name="twitter:description" content="生态学是一门科学，有其严格的科学方法论。 这些内容摘抄于《生态学–关于变化中的地球》(第三版)，写得特别好！">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>HLM与生态学 | Yao&#39;s jottings</title>
+<title>生态学科学方法 | Yao&#39;s jottings</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -238,11 +238,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-HLM" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-生态学科学方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/25/HLM/" class="article-date">
-      <time datetime="2019-08-25T05:52:15.094Z" itemprop="datePublished">2019-08-25</time>
+      <a href="/2019/09/22/生态学科学方法/" class="article-date">
+      <time datetime="2019-09-22T09:00:47.584Z" itemprop="datePublished">2019-09-22</time>
 </a>
 
 
@@ -257,7 +257,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HLM与生态学
+      生态学科学方法
     </h1>
   
 
@@ -274,44 +274,22 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>HLM基本思路和生态学思考</p>
+        <p>生态学是一门科学，有其严格的科学方法论。</p>
+<p>这些内容摘抄于《生态学–关于变化中的地球》(第三版)，写得特别好！</p>
 <a id="more"></a>
 
-<p>这两天将文章初稿交给老师后，又开始闲不住了，看起了之前没怎么看懂的<strong>分层线性模型(Hierarchical Linear Model，HLM)</strong>。大致弄懂了它的套路和方法的适用性。</p>
-<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h2><p>首先它是一个<strong>线性模型</strong>，这种是统计学模型中最广泛和最常用的一类。所谓线性，我的理解就是各个自变量或者它们之间的交互对因变量的影响是相加的，现实世界亦是如此，我们的思维也是如此，我们很难想象非线性是怎样作用的，混沌的产生也与非线性有关。这是一个基本的大前提，目前几乎所有的统计学模型都是基于线性模型发展起来的。其次这个模型是<strong>分层的</strong>，即它专门是处理<strong>层次结构数据</strong>而提出的。何谓层次结构数据？这与我们所研究的对象的不同而不同，在社会学中，学生-班级-学校就是一个层次结构，学生所在班级不同，班级嵌套在学校里边，就像是试验设计中的裂区设计；在生态学中，树种-群落-地区就是一个层次结构，不同地区下的森林群落类型不同，不同的森林群落类型下的生物多样性也自然不同。</p>
-<h2 id="2-示例"><a href="#2-示例" class="headerlink" title="2. 示例"></a>2. 示例</h2><p>我们要分析学生成绩与家庭收入之间的关系，如果放在一个学校总体里分析还好说，就是简单的一元线性回归，将学生成绩作为因变量，家庭收入作为自变量回归即可。但如果是对多个学校进行分析，我们不得不考虑学校之间的差异，比如学校之间存在着教学质量或者入学水平的差异，这些因素显然是会影响学生的成绩的。对于这种分层数据，我们这样规定，学生从属于不同的学校，所以<strong>学生是层1单位，学校是层2单位</strong>。</p>
+<h2 id="生态学科学方法"><a href="#生态学科学方法" class="headerlink" title="生态学科学方法"></a>生态学科学方法</h2><p>​        <strong>所谓科学方法是指建立假设、收集数据、用数据来检验建立的假设、得到结论，然后将得到的结论添加进更宽泛的科学成果中，从而用来构建理论</strong>。准确的观测和对细节的考察是科学的基础，也是建立一个明确界定的、假设的关键。</p>
+<p>​        假设是对事件或观察结果的一种解释，它通常可以解释某一方面的所有可得到的数据。假设必须是经得起事实检验的。为了便于检验，一种假设必须能直接推出某种特定的预言，而我们检验的正是这种预言的正确性，我们必须注意到<strong>一种科学假设不可能被证实而只能被证伪</strong>。对假设的检验可能通过实验室试验、计算机建模、长期野外观察、测量、量化等方式进行，数据的收集和分析应避免偏见或对结果的先入为主的预想，整个过程的多次重复必须得到相同的结果才能证明假设的可行性。分析结果最终应该形成逻辑的科学结论，该结论是建立在验证了预言的检验结果之上的。尽管搜集了所有相关信息，我们还不能说证明了该假设。例如，观察情况可能是“所有我见过的天鹅都是白色的”，然后我可以建立假设“所有的天鹅都是白色的”。为了验证我的假设，我考察了整个北美洲，也许又发现了几千只白色的天鹅，我丰富了资料并加强了我的论点，但是我还不能够证实我的假设。将考察的范围继续扩大，走遍了欧洲、非洲和亚洲，我仍然只看到白色的天鹅。我的假设依旧完整但是未被证明。然后我去了澳大利亚并找到了一只黑天鹅，这仅有的一个新数据驳倒了我的假设。</p>
+<p>​        我找到了多少只白天鹅都无关紧要，一只黑天鹅就足以否定我的假设了。科学要求我建立一种新的假设以适应新的数据，一个假设可能是“美洲的所有天鹅都是白色的”，因为带有“美洲”这个限定词，这个假设没有原来的那个更有效。去除一部分观察数据将会削弱假设，特别是在没有理由来证明或解释这种数据去除的时候。此外，尽管这种受限制的假设可以被检验，却不能将研究者引入新的认识道路。一个能够促进人们对情况了解得更好的假设是“所有白天鹅之间的亲缘关系比白天鹅和黑天鹅之间的亲缘关系更为接近”。这个预言可以通过比较二者的遗传物质而被证实。</p>
+<p>​        当许多针对相同基本问题的假设被验证为可行之后，就可以提出一个更普遍适用更有力的包涵所有假设在内的论断，这样的论断就是科学理论。<strong>理论代表科学认识的最高层次（它不可能是某个“事实”，因为“事实”不能被证明而只能被证伪）</strong>。例如我们知道万有引力定律、光学定律和进化论，它们都经受住了一次次的科学检验，是我们揭示宇宙奥秘的有力工具。理论不是刻在石头上一成不变的，它们会随着人类认识的深入而被不断修正。<br>​        和其他的学术训练一样，生态学研究的是相对事实，而不是绝对事实。随着我们对知识的掌握，我们的科学和假设都在不断地被修正以便与新的信息相符。科学界的先驱们根据他们所处的时代对真理的认识提出了自己的假设，尽管他们的逻辑是完美无瑕的，但如果他们的前提假设有错误，他们还是会得到错误的结论。但前人不会因为没有得到正确的结论就被认为是蹩脚的科学家，无论是蹒跚的前进还是巨大的飞跃，研究者们有时推进了知识，有时却陷入死胡同。但即便是死胡同和否定性的结果也都是科学知识积累的重要组成部分，后人可以借助这些结果构建起自己的假设，从而了解自然。正是寻求真实和努力证伪某些理论的积极性造就了独一无二的科学方法。指导生态学思考的最强有力的理论就是自然选择下的生物进化论。</p>
 <blockquote>
-<p>一方面，如果只考虑层1单位(学生层面)的分析，即将不同学校的学生汇集在一起分析，我们就不能解释背景和环境对个体行为的影响；同时，这种个体主义视角没有考虑到从属于同一学校的学生之间的同质性是要高于从属于不同学校的学生之间的同质性，从而违背了OLS回归的基本假定，即观测变量独立同分布和无序列相关；另一方面，如果我们忽略个体层次的观测，仅仅依赖层2单位(学校层面)的数据进行分析，那么当我们试图将分析之后的结论推广到个体层次时，可能会导致方法论上的<strong>生态学谬误(ecological fallacy)</strong>。</p>
-</blockquote>
-<p>上面探讨了仅对层1单位或仅对层2单位进行分析在方法论上存在着缺陷。</p>
-<p>分层线性模型就是综合考虑了层1单位和层2单位的变异的影响，将层次纳入到线性模型中的一种方法。</p>
-<h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><p>基本的两层线性模型一般有4个子模型，都是通过完全模型简化得到的。</p>
 <ol>
-<li><strong>零模型</strong></li>
+<li>科学就是一个逻辑推理和验证假设的过程。</li>
+<li>科学方法建立在能够验证假设的精确且可重复的观察之上。</li>
+<li>一个理论必须与所有已被证实的假设相容，是自然科学所提出的最高定论。</li>
+<li>所有假设或理论都有可能被证明是错误的。</li>
 </ol>
-<p>即在层1单位和层2单位都不包含自变量的模型。</p>
-<ol start="2">
-<li><strong>均值作为结果的模型</strong></li>
-</ol>
-<p>层1单位不包含自变量，层1模型中的截距被层2单位的一个变量W解释。</p>
-<ol start="3">
-<li><strong>随机系数模型</strong>   </li>
-</ol>
-<p>一般来说，层1模型都会包含一个或多个斜率，这些斜率在层2单位之间随机变化，这就是随机系数模型，可分为随机截距模型和随机斜率模型。</p>
-<ol start="4">
-<li><strong>完全模型</strong></li>
-</ol>
-<p>这是最基本的HLM，即层1单位的因变量有几个自变量进行解释，所得到的截距和斜率在层2单位作为因变量被层2中的几个自变量解释，这样就构成了一个模型组。</p>
-<p>具体的细节和各种模型的作用可以参考谢宇《回归分析》。</p>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>在森林生态学中，HLM被广泛用于解决各种生态学问题，一般被称为<strong>线性混合效应模型(Linear mixed effect model)</strong>，当因变量非连续时，可以通过连接函数将因变量变换成连续变量再进行分析，此时叫做<strong>广义线性混合效应模型(generalized linear mixed effect model)</strong>。</p>
-<p>比如在分析多个样地下，幼苗存活率与幼苗功能性状的关系时，因为样地只是对于地球上全部森林这个总体的一次抽样，具有随机效应，以及大样地的一些属性，如样地的取样面积、样地所处的区域气候等也会影响着幼苗存活率，因此层1单位为幼苗，层2单位为样地，分析时要从样地水平和幼苗水平同时考虑。</p>
-<p>具体的生态学例子我还在学习，还在看文献，以后再补充好了。</p>
-<p>生活中，层次结构数据是很多的，我们可以自己头脑风暴，想出一些基本问题来用HLM解答。多思考、多运用才能更好地掌握知识。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
-<p>谢宇，2013，《回归分析》(修订版)，北京：社会科学文献出版社</p>
-<p>Stephen Raudenbush、Anthony Bryk，2007, 《分层线性模型：应用与数据分析方法》(第2版)，郭志刚等译，北京：社会科学文献出版社</p>
 </blockquote>
-<p>​                         </p>
 
       
     </div>
@@ -323,16 +301,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/22/生态学科学方法/">
-                    生态学科学方法
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/08/16/hello-world/">
-                    Hello World
+                <a href="/2019/08/25/HLM/">
+                    HLM与生态学
                 </a>
             </div>
         
@@ -344,7 +316,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-定义"><span class="toc-number">1.</span> <span class="toc-text">1. 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-示例"><span class="toc-number">2.</span> <span class="toc-text">2. 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本思路"><span class="toc-number">2.1.</span> <span class="toc-text">基本思路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">3.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#生态学科学方法"><span class="toc-number">1.</span> <span class="toc-text">生态学科学方法</span></a></li></ol>
         
     </div>
     <style>
@@ -375,15 +347,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/22/生态学科学方法/" title="上一篇: 生态学科学方法">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/08/16/hello-world/" title="下一篇: Hello World">
+            <a href="/2019/08/25/HLM/" title="下一篇: HLM与生态学">
                 <i class="fa fa-angle-right"></i>
             </a>
         

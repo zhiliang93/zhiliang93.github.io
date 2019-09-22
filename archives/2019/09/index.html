@@ -15,17 +15,13 @@
 
 
 
-<meta name="description" content="HLM基本思路和生态学思考">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HLM与生态学">
-<meta property="og:url" content="http://www.zhiliang.site/2019/08/25/HLM/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yao&#39;s jottings">
+<meta property="og:url" content="http://www.zhiliang.site/archives/2019/09/index.html">
 <meta property="og:site_name" content="Yao&#39;s jottings">
-<meta property="og:description" content="HLM基本思路和生态学思考">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-25T06:05:18.362Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HLM与生态学">
-<meta name="twitter:description" content="HLM基本思路和生态学思考">
+<meta name="twitter:title" content="Yao&#39;s jottings">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>HLM与生态学 | Yao&#39;s jottings</title>
+<title>Archives: 2019/9 | Yao&#39;s jottings</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +63,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
-        isArchive: false,
+        isPost: false,
+        isArchive: true,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -238,165 +234,52 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-HLM" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2019/08/25/HLM/" class="article-date">
-      <time datetime="2019-08-25T05:52:15.094Z" itemprop="datePublished">2019-08-25</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2019/09/22/生态学科学方法/" class="archive-article-date">
+      <time datetime="2019-09-22T09:00:47.584Z" itemprop="datePublished">09-22</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      HLM与生态学
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/09/22/生态学科学方法/">生态学科学方法</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <p>HLM基本思路和生态学思考</p>
-<a id="more"></a>
 
-<p>这两天将文章初稿交给老师后，又开始闲不住了，看起了之前没怎么看懂的<strong>分层线性模型(Hierarchical Linear Model，HLM)</strong>。大致弄懂了它的套路和方法的适用性。</p>
-<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h2><p>首先它是一个<strong>线性模型</strong>，这种是统计学模型中最广泛和最常用的一类。所谓线性，我的理解就是各个自变量或者它们之间的交互对因变量的影响是相加的，现实世界亦是如此，我们的思维也是如此，我们很难想象非线性是怎样作用的，混沌的产生也与非线性有关。这是一个基本的大前提，目前几乎所有的统计学模型都是基于线性模型发展起来的。其次这个模型是<strong>分层的</strong>，即它专门是处理<strong>层次结构数据</strong>而提出的。何谓层次结构数据？这与我们所研究的对象的不同而不同，在社会学中，学生-班级-学校就是一个层次结构，学生所在班级不同，班级嵌套在学校里边，就像是试验设计中的裂区设计；在生态学中，树种-群落-地区就是一个层次结构，不同地区下的森林群落类型不同，不同的森林群落类型下的生物多样性也自然不同。</p>
-<h2 id="2-示例"><a href="#2-示例" class="headerlink" title="2. 示例"></a>2. 示例</h2><p>我们要分析学生成绩与家庭收入之间的关系，如果放在一个学校总体里分析还好说，就是简单的一元线性回归，将学生成绩作为因变量，家庭收入作为自变量回归即可。但如果是对多个学校进行分析，我们不得不考虑学校之间的差异，比如学校之间存在着教学质量或者入学水平的差异，这些因素显然是会影响学生的成绩的。对于这种分层数据，我们这样规定，学生从属于不同的学校，所以<strong>学生是层1单位，学校是层2单位</strong>。</p>
-<blockquote>
-<p>一方面，如果只考虑层1单位(学生层面)的分析，即将不同学校的学生汇集在一起分析，我们就不能解释背景和环境对个体行为的影响；同时，这种个体主义视角没有考虑到从属于同一学校的学生之间的同质性是要高于从属于不同学校的学生之间的同质性，从而违背了OLS回归的基本假定，即观测变量独立同分布和无序列相关；另一方面，如果我们忽略个体层次的观测，仅仅依赖层2单位(学校层面)的数据进行分析，那么当我们试图将分析之后的结论推广到个体层次时，可能会导致方法论上的<strong>生态学谬误(ecological fallacy)</strong>。</p>
-</blockquote>
-<p>上面探讨了仅对层1单位或仅对层2单位进行分析在方法论上存在着缺陷。</p>
-<p>分层线性模型就是综合考虑了层1单位和层2单位的变异的影响，将层次纳入到线性模型中的一种方法。</p>
-<h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><p>基本的两层线性模型一般有4个子模型，都是通过完全模型简化得到的。</p>
-<ol>
-<li><strong>零模型</strong></li>
-</ol>
-<p>即在层1单位和层2单位都不包含自变量的模型。</p>
-<ol start="2">
-<li><strong>均值作为结果的模型</strong></li>
-</ol>
-<p>层1单位不包含自变量，层1模型中的截距被层2单位的一个变量W解释。</p>
-<ol start="3">
-<li><strong>随机系数模型</strong>   </li>
-</ol>
-<p>一般来说，层1模型都会包含一个或多个斜率，这些斜率在层2单位之间随机变化，这就是随机系数模型，可分为随机截距模型和随机斜率模型。</p>
-<ol start="4">
-<li><strong>完全模型</strong></li>
-</ol>
-<p>这是最基本的HLM，即层1单位的因变量有几个自变量进行解释，所得到的截距和斜率在层2单位作为因变量被层2中的几个自变量解释，这样就构成了一个模型组。</p>
-<p>具体的细节和各种模型的作用可以参考谢宇《回归分析》。</p>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>在森林生态学中，HLM被广泛用于解决各种生态学问题，一般被称为<strong>线性混合效应模型(Linear mixed effect model)</strong>，当因变量非连续时，可以通过连接函数将因变量变换成连续变量再进行分析，此时叫做<strong>广义线性混合效应模型(generalized linear mixed effect model)</strong>。</p>
-<p>比如在分析多个样地下，幼苗存活率与幼苗功能性状的关系时，因为样地只是对于地球上全部森林这个总体的一次抽样，具有随机效应，以及大样地的一些属性，如样地的取样面积、样地所处的区域气候等也会影响着幼苗存活率，因此层1单位为幼苗，层2单位为样地，分析时要从样地水平和幼苗水平同时考虑。</p>
-<p>具体的生态学例子我还在学习，还在看文献，以后再补充好了。</p>
-<p>生活中，层次结构数据是很多的，我们可以自己头脑风暴，想出一些基本问题来用HLM解答。多思考、多运用才能更好地掌握知识。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
-<p>谢宇，2013，《回归分析》(修订版)，北京：社会科学文献出版社</p>
-<p>Stephen Raudenbush、Anthony Bryk，2007, 《分层线性模型：应用与数据分析方法》(第2版)，郭志刚等译，北京：社会科学文献出版社</p>
-</blockquote>
-<p>​                         </p>
-
-      
-    </div>
-    
+          
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
-    
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/22/生态学科学方法/">
-                    生态学科学方法
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/08/16/hello-world/">
-                    Hello World
-                </a>
-            </div>
-        
-    </nav>
-
-  
 </article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-定义"><span class="toc-number">1.</span> <span class="toc-text">1. 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-示例"><span class="toc-number">2.</span> <span class="toc-text">2. 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本思路"><span class="toc-number">2.1.</span> <span class="toc-text">基本思路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">3.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-
+  
+  
+    </div></section>
+  
 
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2019/09/22/生态学科学方法/" title="上一篇: 生态学科学方法">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2019/08/16/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/生态学科学方法/">生态学科学方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/25/HLM/">HLM与生态学</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/16/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
